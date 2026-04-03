@@ -32,3 +32,9 @@ can write our own formulas on exsiting columns... eg to calculate total sales fr
 Now , we can add conditional columns eg for feedback score given from 0 to 5 --> very poor poor below avg.... excellent
 so this is a conditional column based on an existing column..
 
+Now , in PowerBI we have an option to change the source data 
+for example if selected get data and selected a csv file to transform and clean data from
+now if i renamed that csv file powerbi will give error of file not found as we changes the name so path of data will be changed
+to provide new path we do change data source and choose a new path ...
+( very imp when we rename the data file or move the data file to new location)
+( data source is located in home section to change the path of new data file)
