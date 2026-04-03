@@ -1,0 +1,6 @@
+After tranforming data we do apply changes that loads the data into report view first glance of powerBI where 
+reports and dashboards are created 
+
+we can view report view ,  tables view , schema visualizer like supabase where all tables will be there and we can connect them by establishing
+relationships by our own (foreign keys and primary keys) ..
+
