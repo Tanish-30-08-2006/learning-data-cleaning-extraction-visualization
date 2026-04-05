@@ -33,3 +33,7 @@ in transform data no  new column will be added
 now revenue was calculated month wise day wise so we created its new column in report view not in transform data , now if we want to calcuate sum of sales all time we have to create a measure as single number .. 
 
 to display one measure (sum of total sales or sum of total revenue ) WE CAN USE CARDS to display measures 
+
+remember to change datatype of sales , unit price , avg or sum sales from general to decimal number     
+
+we can create threshhold like 
