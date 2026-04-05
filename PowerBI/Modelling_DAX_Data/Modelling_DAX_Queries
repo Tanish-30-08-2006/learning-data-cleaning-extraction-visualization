@@ -20,4 +20,16 @@ third one add day then total sales as values to get day wise sales ..
 
 OR WE CAN CREATE A Hierarchy which has year -> month --> date so we will pass hierarchy and total sales as values ...
 
-Now if we 
+Now if we want to calculate total revenue with gst  18%    
+for this we can go tranfrom data add a new column of revenue calculated from total sales but this will increase our storage data size so we will not make these calculations in power query editor i.e transform data 
+
+OR we can create new measure instead of a whole new actual column in report view itself.. 
+dax is just the formula of that measure or new column we will create for different calculations .. 
+column is row wise calculation of value made from different columns (18% of total sales ) whereas measure give us a single value like sum of total sales 
+
+if we create new column in report view it will not take space as original data remains same in transform data
+in transform data no  new column will be added
+
+now revenue was calculated month wise day wise so we created its new column in report view not in transform data , now if we want to calcuate sum of sales all time we have to create a measure as single number .. 
+
+to display one measure (sum of total sales or sum of total revenue )
