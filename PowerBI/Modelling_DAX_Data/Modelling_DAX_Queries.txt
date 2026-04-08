@@ -40,3 +40,13 @@ now to create some conditions like if total sales for that period is greater tha
 for these conditions we use a measure because columns are calcullated columns , it looks at data row by row and labels it low or high forever so if i label rows high and low and group it by month and year it will not calculate sum for that month or year and again label t high or low , columns are labels for every row we cant group it for month and year later
 # but 
 measure is an temporary attribure which can be calculated for rows and  group of rows for example for month 30 days sum must be calculated and mmust be labelled as high or low measure can do that grouping 
+
+# multiple if else loops --> switch 
+here we labelled sales as high or low so 2 possibilities what if high,very high,low,very low i.e multiple if else cases , there we use switches..
+
+so for example regioon grouping , north -> zone 1 ,  south -> zone 2 ...
+for this we use switch we know it is a permanent label so we can add temp column in report view itself for region grouping in zones , measure is especially used when labelled rows are grouped in future like in sales label of high and low 
+
+code for new column -->
+RegionGrouping = SWITCH(Dim_Customers[Region],"North","Zone 1","South","Zone 2","East","Zone 3","West","Zone 4")
+
