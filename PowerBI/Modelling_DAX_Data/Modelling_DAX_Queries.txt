@@ -36,4 +36,4 @@ to display one measure (sum of total sales or sum of total revenue ) WE CAN USE 
 
 remember to change datatype of sales , unit price , avg or sum sales from general to decimal number especially when we create any new measure from exisitng attribute from fact table
 
-now to create new 
+now to create some conditions like if total sales for that period is greater than some value then we say sales were high or else low ... so we can know many days , months or years sales were low , we can use hierarchy here for year -- > month -- > day and apply that condition and hierarchy in a matri and check for all days where sales were low .......
