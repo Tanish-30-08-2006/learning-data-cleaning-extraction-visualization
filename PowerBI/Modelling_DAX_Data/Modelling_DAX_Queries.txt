@@ -32,10 +32,13 @@ in transform data no  new column will be added
 
 now revenue was calculated month wise day wise so we created its new column in report view not in transform data , now if we want to calcuate sum of sales all time we have to create a measure as single number .. 
 
+# use of cards to display measure
 to display one measure (sum of total sales or sum of total revenue ) WE CAN USE CARDS to display measures 
 
+# note to change datatype of measures and new columns created in report view 
 remember to change datatype of sales , unit price , avg or sum sales from general to decimal number especially when we create any new measure from exisitng attribute from fact table
 
+# conditioned columns ..
 now to create some conditions like if total sales for that period is greater than some value then we say sales were high or else low ... so we can know many days , months or years sales were low , we can use hierarchy here for year -- > month -- > day and apply that condition and hierarchy in a matri and check for all days where sales were low .......
 for these conditions we use a measure because columns are calcullated columns , it looks at data row by row and labels it low or high forever so if i label rows high and low and group it by month and year it will not calculate sum for that month or year and again label t high or low , columns are labels for every row we cant group it for month and year later
 # but 
@@ -49,4 +52,14 @@ for this we use switch we know it is a permanent label so we can add temp column
 
 code for new column -->
 RegionGrouping = SWITCH(Dim_Customers[Region],"North","Zone 1","South","Zone 2","East","Zone 3","West","Zone 4")
+
+# use of iferror function
+for example when we want to check in the column if some row calculation had errors so how can we do that ..
+by iferror function we can perform a calculation if it has some error then we can write 0 or string "error" or anything we want so we can look up in the table where any row had errored value 
+
+Check Error = IFERROR(Fact_Sales[TotalSales]/0,0) 
+here all rows in this new column check error will be 0 as we pass 0 if error .. as anything/0 will give error..
+
+Check Error = IFERROR(Fact_Sales[TotalSales]/0,"error")
+here all rows will show error as message in check error column in fact sales table  as /0 will give error 
 
