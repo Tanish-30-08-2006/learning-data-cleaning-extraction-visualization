@@ -60,6 +60,10 @@ by iferror function we can perform a calculation if it has some error then we ca
 Check Error = IFERROR(Fact_Sales[TotalSales]/0,0) 
 here all rows in this new column check error will be 0 as we pass 0 if error .. as anything/0 will give error..
 
+# what to use when confused for measure vs column .
 Check Error = IFERROR(Fact_Sales[TotalSales]/0,"error")
 here all rows will show error as message in check error column in fact sales table  as /0 will give error 
 
+If you use a Column: Power BI calculates the error once and stores it. It takes up a tiny bit of memory/file size.
+
+If you use a Measure: Power BI calculates the error every time you look at the screen. Since it's a simple /0 check, it's fast, but it's technically "extra work" for the computer to do repeatedly for a result that never changes.
