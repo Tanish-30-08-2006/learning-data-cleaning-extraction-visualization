@@ -1,0 +1,23 @@
+
+DAX --> data analysis expressions
+
+#----------------------------------------------------------------
+
+DAX is used for two things ..
+
+Calculated Columns: Computed row-by-row and stored in the table.
+
+Measures: Computed on the fly based on what the user clicks in the report.
+
+#----------------------------------------------------------------
+
+Types of DAX Functions
+
+These are the basics. They take a column and turn it into a single number.
+
+SUM(): Adds everything up.
+AVERAGE(): Finds the mean.
+COUNT() / DISTINCTCOUNT(): Counts rows or unique values (like counting how many unique Customers you had).
+
+
+#----------------------------------------------------------------
