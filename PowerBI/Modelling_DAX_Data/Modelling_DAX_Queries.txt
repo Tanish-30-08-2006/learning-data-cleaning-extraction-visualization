@@ -119,11 +119,17 @@ to check this add total sales , last month sales , and year hierarchy ..
 in that sum of sales for one month will be sum of sales for last month ..
 note --> last month sale are also called rolling month sales 
 
-
-# to fetch column of different connected table to one table
+# NATURAL JOIN
+# to fetch column of different connected table to one table when ACTIVE CONNECTION is there 
 for example , fact table has product id but no product name but we know that productid is RELATED to dim products ( relationship is there ) and productname can be 
 fetched from that so we can add that column in fact table (temp column as we add that in report view ) to permanently add column we have to click transform data and 
 then add column so that column will be permanently added ..
 
 ProductName = RELATED(Dim_Products[ProductName])
+IFERROR(RELATED(Dim_Products[ProductName]), 0)    -->use iferror(func,0) to view 0 in rows where productname could not be fetched 
 
+# SPECIFIED JOIN ON WHICH COLUMN TO JOIN 
+# what if connection between fact table and product table is INACTIVE so we have to manually tell that give me product name where id of fact table = id od Dim_Products
+# manually joining we use LOOKUP FUNCTION
+
+ProductName = IFERROR(LOOKUPVALUE(Dim_Products[ProductName],Dim_Products[ProductID],Fact_Sales[ProductID]),"error")
