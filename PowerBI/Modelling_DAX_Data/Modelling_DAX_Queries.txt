@@ -105,3 +105,15 @@ starting from that period in hierarchy total sales from the last year going back
 for example on year 2024 in new year hierarchy total sales of 2023 will be shown 
 try [year hierarchy] [factsales[totalSales]], [same period last year sales] , we will see 2024 has 2023 sales..
 
+Last Year Sales = CALCULATE([SumofSales] ,  SAMEPERIODLASTYEAR(Dim_Date[Date]))
+
+
+# DATEADD function which will allow us to calculate last month , last year , last quarter , last day sales 
+last month sale is a measure as we will calculate single value for last momth year day or quarter
+
+Last Month Sale = CALCULATE([SumofSales],DATEADD(Dim_Date[Date],-1,MONTH))
+-1 --> means last month sales to add
+-2 --> sum of sales for last two months for every period
+
+to check this add total sales , last month sales , and year hierarchy .. 
+in that sum of sales for one month will be sum of sales for last month ..
