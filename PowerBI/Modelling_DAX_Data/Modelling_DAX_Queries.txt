@@ -86,3 +86,12 @@ and a total sales card below it in page 3
 when we use a slicer we can select a region and sum of sales would appear for that region..
 now if we want to calculate sum of sales with respect to cities for 1000s of cities we will not add 1000s of measures and add each one to display cards 
 we will add one card of sum of sales and use a slicer to select the city we want sum of sales of ..
+
+# use of filter 
+use of filter can also be used when we want to view total sales above some threshold like high low label , we can use filter
+# to remove filter
+we can use "ALL" to remove filter like when we calculate total sales after filter then we have to remove filter everytime using total sales for any cards or any attribute or anything 
+ 
+# use of month to date , year to date sales .. ( MTD,YTD )
+Sales MTD = TOTALMTD([SumofSales], Fact_Sales[Date])
+Sales YTD = TOTALYTD([SumofSales], Fact_Sales[Date])
