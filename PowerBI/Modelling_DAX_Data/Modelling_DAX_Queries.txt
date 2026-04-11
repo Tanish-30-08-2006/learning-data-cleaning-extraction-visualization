@@ -154,3 +154,9 @@ Measure --> used when we want to calculate a single value not for every row ..
 Visual -- > columns and measures are added as attributes in right side of our data but we just need to calculate a visual like 
             running sum , moving average , rolling sum etc for current box(matrix) of our report .. and we want all attributes of 
             fact_sales to be clean and organised 
+
+# to change how a box or matrix looks like 
+
+for example slicer settings , we need tile or buttons (vertical list) , add button of select all , change colour of title of slicer , border colour
+title font , bold , italic , colour in background etc..
+for all of this we select that matrix go to format visuals and surf....
