@@ -128,8 +128,23 @@ then add column so that column will be permanently added ..
 ProductName = RELATED(Dim_Products[ProductName])
 IFERROR(RELATED(Dim_Products[ProductName]), 0)    -->use iferror(func,0) to view 0 in rows where productname could not be fetched 
 
-# SPECIFIED JOIN ON WHICH COLUMN TO JOIN 
+
+
+# SPECIFIED JOIN     ( ON WHICH COLUMN TO JOIN )
 # what if connection between fact table and product table is INACTIVE so we have to manually tell that give me product name where id of fact table = id od Dim_Products
 # manually joining we use LOOKUP FUNCTION
 
 ProductName = IFERROR(LOOKUPVALUE(Dim_Products[ProductName],Dim_Products[ProductID],Fact_Sales[ProductID]),"error")
+
+
+# INITIALIZING VARIABLES FOR BIG FORMULAS
+
+What if we need to calculate (gross profit) so i.e (total sales - total cost price) 
+Sales Margin = 
+VAR Cost = (0.8)*[SumofSales]
+VAR Revenue = [SumofSales] 
+VAR SalesMargin = Revenue - Cost 
+RETURN SalesMargin
+
+
+
