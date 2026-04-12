@@ -172,6 +172,8 @@ for all of this we select that matrix go to format visuals and surf....
 
 
 FIELD PARAMETER 
+PRODUCT NAME --> TOTAL SALES , TOTAL QUANTITY --> FIELDS..
+
 # if we want to add a parameter in which we can choose total sales and total quantity sold for product name or product category 
 
 we create a new parameter named metric picker from which we can pick TWO MEASURES sum of total sales and sum of quantity
@@ -184,6 +186,12 @@ now we will create a matrix with productname and we will need values of metric p
 so we will have to drag its values which are two measures so when we select a one from slicer it displays on that different matrix box we created as a measure..
 so in new matrix box with product name or product accessory name add values as metirc picker values ...
  
+
+# FIELD PARAMETER
+CATEGORY NAME  --> TOTAL SALES , SALES NORTH REGION ,SALES SOUTH REGION ,SALES EAST REGION,SALES WEST REGION , TOTAL QUANTITY 
+
+here we create a matrix with category name and values of this box as metric picker with above mentioned fields and year hierarchy matrix generated on a side
+
 
 
 # Performance Analyzer
