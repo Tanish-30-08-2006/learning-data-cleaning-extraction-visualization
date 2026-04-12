@@ -1,0 +1,27 @@
+
+Pages --> different pages for different reports views of different department analysis
+
+FILTERS --> we want to see analysis for category , for different products like laptops , smartphones etc..
+FILTERS -----> CAN BE APPLIED ON --> PAGE
+                                     ACROSS ALL PAGES
+                                     ACROSS A VISUAL(BOX)
+
+bar charts --> to see category wise total sales or product name wise total sales etc
+line charts --> time is involved 
+
+like we want to view sales for 2024 last quarter date wise as  a trend line in bar chart ..
+so we will create a line chart y axis , total sales and x axis , date from dim date which is all time dates
+so now 
+    
+tool_tips are attributes shwon to us when we put out cursor on a bar in bar chart or a slice in pie chart etc..
+
+KPI --> key performance indicator 
+Measures for sales performance , product efficiency , regional health to indicate performace of a company 
+desgined for tracking a goal --->
+
+Value: Put your SumofSales.
+Trend Axis: Put your MonthName.
+Target: Put a goal (like a fixed number or a "Target Sales" measure).   
+Result: This visual will show the number, a line chart in the background,
+        and turn Green or Red automatically based on whether you hit your target.
+We set target of 40K , here we have to create a measure of target ( Target = 40000) and add that on target part in KPI ..
