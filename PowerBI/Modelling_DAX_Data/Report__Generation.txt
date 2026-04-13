@@ -49,3 +49,5 @@ Bins for histogram ..
 For example we want bins of total sales in some slices so for that we right click total sales and new group and 
 group type we select as bins
 
+Decomposition charts / tree
+Just Like Flowcharts ( product category --> product name --> unit price)
