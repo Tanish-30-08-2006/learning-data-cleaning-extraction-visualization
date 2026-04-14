@@ -51,3 +51,7 @@ group type we select as bins
 
 Decomposition charts / tree
 Just Like Flowcharts ( product category --> product name --> unit price)
+
+------------ Forecasting ----------------
+(MANAGING REPORTS / RLS SECURITY / PUBLISHING REPORTS TO DASHBOARD)
+
